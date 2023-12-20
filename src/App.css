@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.chat-app {
+  width: 100%;
+  height: 100%;
   min-height: 100vh;
+  background-color: #282c34;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  padding: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.chat-container {
+  width: 100%;
+  height: 100vh;
+  border-radius: 20px;
+  background-color: #383d47;
+}
+.chat-header {
+  width: 100%;
+}
+.input-field {
+  position: fixed;
+  bottom: 5%;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  /* width: 100%; */
+}
+.input-field > input {
+  opacity: 0.3;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-size: 1.2rem;
+}
+.mine-message {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mine-message > .message {
+  background-color: #3a3f4b;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  max-width: 60%;
+  width: auto;
+  word-wrap: break-word;
+}
+
+.ai-message {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.ai-message > .message {
+  background-color: #494c54;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  max-width: 60%;
+  width: auto;
+  word-wrap: break-word;
 }
